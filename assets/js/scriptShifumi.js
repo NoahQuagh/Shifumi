@@ -7,6 +7,8 @@ const drawZone = document.getElementById('draw');
 const loseZone = document.getElementById('lose');
 const section = document.getElementById('result-display');
 
+
+
 document.addEventListener("DOMContentLoaded", () => {
     const shifumiAction = document.querySelectorAll('.choice-btn');
 
@@ -35,11 +37,18 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
+/**
+ * Choix du robot
+ * @returns {string} retourne le choix du bot
+ */
 function botChoice() {
     const randomIndex = Math.floor(Math.random() * actionList.length);
     return actionList[randomIndex];
 }
 
+/**
+ * Remise à 0 du score
+ */
 function resetScore(){
     win = 0;
     draw = 0;
